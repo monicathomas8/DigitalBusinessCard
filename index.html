@@ -52,12 +52,25 @@
 
             <!-- Footer -->
             <footer class="card-footer">
-                <p>Made with 🐾 by Your Name</p>
+                <p>Made with ☕ and 💻 by <a href="https://www.monica-webdeveloper.com/" target="_blank" rel="noopener">Monica | Web Developer</a></p>
+                <p class="copyright">© 2026 Your Name. All rights reserved.</p>
             </footer>
-
         </main>
 
-
+        <!-- Connect popup (hidden by default) -->
+        <div id="connectModal" class="modal-overlay hidden">
+            <div class="modal">
+                <button class="modal-close" id="closeConnect">✕</button>
+                <h2>Let's Connect</h2>
+                <form id="connectForm">
+                    <input type="text" name="name" placeholder="Their name" required>
+                    <input type="text" name="contact" placeholder="Phone or email" required>
+                    <textarea name="note" placeholder="Note (optional)"></textarea>
+                    <button type="submit" class="button button--main">Send</button>
+                </form>
+                <p id="connectSuccess" class="success-message hidden">Thanks! Message sent.</p>
+            </div>
+        </div>
 
         <script src="assets/js/script.js"></script>
     </body>
