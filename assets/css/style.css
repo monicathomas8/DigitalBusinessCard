@@ -1,0 +1,152 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Card Styles set for mobile screens */
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Header Styles */
+.card-header {
+  text-align: center;
+  padding: 2rem 1.5rem 1rem;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%; /* Circular avatar */
+  background: #e0e0e0;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin: 0 auto 1rem;
+}
+
+.name {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Card Actions Styles using flexbox */
+.actions {
+  padding: 0 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button--main {
+  background: #333;
+  color: #fff;
+}
+
+.button--main:hover {
+  background: #000;
+}
+
+.button--secondary {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.button--secondary:hover {
+  background: #e6e6e6;
+}
+
+/* Links Section Styles */
+.links {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+.link-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0.2rem;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.link-row:last-child {
+  border-bottom: none;
+}
+
+.link-row .arrow {
+  color: #aaa;
+}
+
+.link-row:hover {
+  color: #000;
+}
+
+.link-row:hover .arrow {
+  color: #333;
+}
+
+.cta {
+  padding: 0.5rem 1.5rem 1.5rem;
+}
+
+.card-footer {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  font-size: 0.8rem;
+  color: #999;
+}
