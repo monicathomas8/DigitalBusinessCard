@@ -150,3 +150,12 @@ body {
   font-size: 0.8rem;
   color: #999;
 }
+
+/* Save Message Styles */
+.save-message {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #2e7d32;
+  padding: 0 1.5rem;
+  min-height: 1rem;
+}
