@@ -5,13 +5,29 @@
   box-sizing: border-box;
 }
 
+/* Body Styles background colour */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #f0f0f0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 2rem 1rem;
+  background: linear-gradient(-45deg, #2d2d2d, #5b4b8a, #2d6a6a, #2d2d2d);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+    background-position: 0% 50%;
+  }
 }
 
 /* Card Styles set for mobile screens */
@@ -33,14 +49,22 @@ body {
 .avatar {
   width: 72px;
   height: 72px;
-  border-radius: 50%; /* Circular avatar */
-  background: #e0e0e0;
-  color: #888;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
+  border-radius: 50%;
+  object-fit: cover;
   margin: 0 auto 1rem;
+  display: block;
+  animation: floatAvatar 4s ease-in-out infinite;
+}
+
+@keyframes floatAvatar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar {
+    animation: none;
+  }
 }
 
 .name {
@@ -87,22 +111,26 @@ body {
 }
 
 .button--main {
-  background: #333;
+  background: linear-gradient(135deg, #5b4b8a, #2d6a6a);
   color: #fff;
 }
 
 .button--main:hover {
-  background: #000;
+  background: linear-gradient(135deg, #4a3c72, #235454);
 }
 
 .button--secondary {
-  background: #f0f0f0;
-  color: #333;
-  border: 1px solid #ddd;
+  background: #fff;
+  color: #5b4b8a;
+  border: 1px solid #d8d0e8;
+  box-shadow: 0 2px 8px rgba(91, 75, 138, 0.15);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .button--secondary:hover {
-  background: #e6e6e6;
+  background: #5b4b8a;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(91, 75, 138, 0.3);
 }
 
 /* Links Section Styles */
@@ -244,4 +272,17 @@ body {
 
 .card-footer a:hover {
   text-decoration: underline;
+}
+
+.link-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.link-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
 }
